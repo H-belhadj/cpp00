@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:33:23 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/19 23:36:57 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/20 00:15:40 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,15 @@ class Contact
     public:
         Contact();
         ~Contact();
-        void    add();
+        void            Add();
+        std::string     getName(std::string name);
+        std::string     getIn(std::string str);
+        bool            isName(std::string adentro);
+        std::string     getPhone(std::string phone);
+        bool            isPhone(std::string adentro);
+
+
+
         
 };
 
