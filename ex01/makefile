@@ -1,5 +1,5 @@
 CXX=c++
-SRC = megaphone.cpp
+SRC = Contact.cpp PhoneBook.cpp
 
 OSRC=$(SRC:.cpp=.o)
 NAME= megaphone
