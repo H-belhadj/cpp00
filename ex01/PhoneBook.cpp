@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:30:14 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/20 00:16:12 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/20 10:06:17 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,19 @@
 //     std::cout << "Enter Darkest Secret" << std::endl;
 //     std::cin >> Darkest_Secret;
 //     re
+        
 // }
+
+std::string PhoneBook::comenzar(std::string str)
+{
+    std::string adentro = "";
+    //printf the table;
+    while(adentro.compare("EXIT"))
+    {
+        std::cout << ">>";
+        std::getline(std::cin, adentro);
+        if(std::cin.eof)
+            break;
+        
+    }
+}
