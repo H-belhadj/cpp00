@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:36:01 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/20 00:15:52 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/20 11:36:04 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,24 @@
 bool            Contact::isName(std::string adentro)
 {
     int i = 0;
-    while(adentro[i++])
+    while(adentro[i])
+    {
         if(!isalpha(adentro[i]) && adentro[i] != ' ')
             return(0);
+        i++;
+    }
     return(1);
 }
 
 bool            Contact::isPhone(std::string adentro)
 {
     int i = 0;
-    while(adentro[i++])
-        if(!isdigit(adentro[i]) && adentro[0] != '+')
+    while(adentro[i])
+    {
+        if(!isdigit(adentro[i]))
             return(0);
+        i++;
+    }
     return(1);
 }
 
@@ -93,7 +99,7 @@ std::string     Contact::getName(std::string name)
             std::cout << "\nGOOD BYE\n";
             exit(0);
         }
-        if(std::cin.good() && !adentro.empty() && this->isName(adentro))
+        if(std::cin.good() && !adentro.empty() && isName(adentro))
             valid = 1;
         else
         {
@@ -106,7 +112,7 @@ std::string     Contact::getName(std::string name)
 
 void    Contact::Add()
 {
-    std::cout << "------------------- NEW CONTACT------------";
+    std::cout << "------------------- NEW CONTACT------------\n";
     this->First_Name = getName("First_Name\t"); 
     this->Last_Name = getName("Last_Name\t"); 
     this->Nickname = getIn("Nickname\t"); 

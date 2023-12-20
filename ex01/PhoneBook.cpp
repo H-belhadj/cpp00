@@ -6,11 +6,14 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:30:14 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/20 10:06:17 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/20 13:00:58 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <iomanip>
+#include <iostream>
+#include <sstream>
 
 // int PhoneBook::Add_value()
 // {
@@ -33,16 +36,17 @@
         
 // }
 
-std::string PhoneBook::comenzar(std::string str)
+void PhoneBook::disPlay()
 {
-    std::string adentro = "";
-    //printf the table;
-    while(adentro.compare("EXIT"))
-    {
-        std::cout << ">>";
-        std::getline(std::cin, adentro);
-        if(std::cin.eof)
-            break;
-        
-    }
+    std::cout << "|" << std::setw(10) << "index" ;
+    std::cout << "|" << std::setw(10) << "First_Name" ;
+    std::cout << "|" << std::setw(10) << "Last_Name" ;
+    std::cout << "|" << std::setw(10) << "Nickname" << "|" <<  std::endl;
 }
+
+// void    PhoneBook::Search_calue()
+// {
+//     std::cout << "|" << std::setw(10) << "ab" << std::endl;
+    
+    
+// }

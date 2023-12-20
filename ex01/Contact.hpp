@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:33:23 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/20 00:15:40 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/20 11:24:25 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,14 @@ class Contact
         std::string  Phone_Number;
         std::string  Darkest_Secret;
     public:
-        Contact();
-        ~Contact();
+        Contact(){}
+        ~Contact(){}
         void            Add();
         std::string     getName(std::string name);
         std::string     getIn(std::string str);
         bool            isName(std::string adentro);
         std::string     getPhone(std::string phone);
         bool            isPhone(std::string adentro);
-
-
-
-        
 };
 
 #endif
