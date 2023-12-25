@@ -2,7 +2,7 @@ CXX=c++
 SRC = Contact.cpp PhoneBook.cpp main.cpp
 
 OSRC=$(SRC:.cpp=.o)
-NAME= megaphone
+NAME= teleshop
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RED = \033[1;31m

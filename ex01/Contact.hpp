@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:33:23 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/20 11:24:25 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/25 19:26:50 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ class Contact
         bool            isName(std::string adentro);
         std::string     getPhone(std::string phone);
         bool            isPhone(std::string adentro);
+        std::string     set_up_str(std::string str);
+        int             contact(int i);
+        int             print_contact(int i);
+        void            print_contact_details(int index);
 };
 
 #endif
