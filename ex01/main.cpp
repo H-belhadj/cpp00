@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 00:48:29 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/26 00:51:37 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/26 03:22:47 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int main()
 {
     std::string cmd;
     PhoneBook phonebook;
-    Contact Contact;
     while(1)
     {
         std::cout << "Enter a Command a Primo [ADD, SEARCH, EXIT] >>>>> ";

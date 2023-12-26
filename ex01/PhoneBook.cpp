@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:30:14 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/26 01:01:56 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/26 20:48:32 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void    PhoneBook::disPlay()
 {
     int i = -1;
     std::cout << "=============================================" << std::endl;
-    std::cout << "|  INDEX  |First Name| Last Name| NickName|" <<std::endl;
+    std::cout << "|   INDEX  |First Name| Last Name| NickName |" <<std::endl;
     while(++i < 8)
     {
         if(contacts[i].print_contact(i))
@@ -65,9 +65,7 @@ void    PhoneBook::search()
     while(++i < 8)
     {
         std::string tmp;
-        tmp = contacts[i]->getName;
-        // if(contacts[i].yes == 0)
-        if(tmp.empty())
+        if(contacts[i].yes == 0)
             break;
     }
     if(i == 0)

@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:36:01 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/26 01:34:58 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/26 20:09:43 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 bool            Contact::isName(std::string adentro)
 {
     int i = 0;
+    if(adentro[0] == ' ')
+        return(0);
     while(adentro[i])
     {
         if(!isalpha(adentro[i]) && adentro[i] != ' ')
@@ -24,6 +26,13 @@ bool            Contact::isName(std::string adentro)
         i++;
     }
     return(1);
+}
+
+bool Contact::isNot(std::string adentro)
+{
+    if(adentro[0] == ' ')
+        return(0);
+    return (1);
 }
 
 bool            Contact::isPhone(std::string adentro)
@@ -76,7 +85,7 @@ std::string     Contact::getIn(std::string str)
             std::cout << "\nGOOD BYE\n";
             exit(0);
         }
-        if(std::cin.good() && !adentro.empty())
+        if(std::cin.good() && !adentro.empty() && isNot(adentro))
             valid = 1;
         else
         {
@@ -145,7 +154,7 @@ void    Contact::Add()
     this->Phone_Number = getPhone("\tPhone_Number\t"); 
     this->Darkest_Secret = getIn("\tDarkest_Secret\t"); 
     std::cout << "|---------------------------------------------------|\n";
-    // yes = 1;
+    yes = 1;
 }
 void Contact::print_contact_details(int index)
 {
