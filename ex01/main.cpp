@@ -1,8 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/26 00:48:29 by hbelhadj          #+#    #+#             */
+/*   Updated: 2023/12/26 00:51:37 by hbelhadj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
-#include <iomanip>
-#include <iostream>
-#include <sstream>
 
 int main()
 {
@@ -12,34 +20,18 @@ int main()
     while(1)
     {
         std::cout << "Enter a Command a Primo [ADD, SEARCH, EXIT] >>>>> ";
-
         std::getline(std::cin, cmd);
         if(std::cin.eof())
         {
             std::cout << std::endl;
             exit(0);
         }
-        if(cmd == "EXIT")
-            exit(0);
-        else if(cmd == "ADD")
-            Contact.Add();
-        else
-            std::cout << "Dor ghayrha ma3adnachi hadchi" << std::endl;
-        
+        if(cmd == "ADD")
+            phonebook.Add_value();
+        else if (cmd == "SEARCH")
+            phonebook.search();
+        else if(cmd == "EXIT")
+            return(0);
     }
     return (0);
-    // exit(0);
-    // while(std::getline(std::cin ,tefa7i))
-    // {
-    //     if (tefa7i == "EXIT")
-    //         exit(0);
-    //     else if(tefa7i == "ADD")
-    //         C.Add();
-    //         //
-    //     // else if(tefa7i == "SEARCH")
-    //         //
-    //     // std::cout << tefa7i << std::endl;
-    // }
-    // v.disPlay();
-    // return(0);
 }

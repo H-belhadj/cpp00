@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:33:23 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/25 19:26:50 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/26 00:59:38 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #   define CONTACT_H
 
 #include <iostream>
+// #include "PhoneBook.hpp"
 
 class Contact
 {
@@ -24,7 +25,9 @@ class Contact
         std::string  Phone_Number;
         std::string  Darkest_Secret;
     public:
-        Contact(){}
+        Contact(){
+            // yes = 0;
+        }
         ~Contact(){}
         void            Add();
         std::string     getName(std::string name);
@@ -36,6 +39,7 @@ class Contact
         int             contact(int i);
         int             print_contact(int i);
         void            print_contact_details(int index);
+        // bool yes;
 };
 
 #endif

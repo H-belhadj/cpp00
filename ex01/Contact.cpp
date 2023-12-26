@@ -6,12 +6,13 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 21:36:01 by hbelhadj          #+#    #+#             */
-/*   Updated: 2023/12/25 19:26:35 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2023/12/26 01:34:58 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
+
 
 bool            Contact::isName(std::string adentro)
 {
@@ -112,16 +113,16 @@ std::string     Contact::getName(std::string name)
 
 std::string Contact::set_up_str(std::string str)
 {
-    while(str.length() > 10)
+    if(str.length() > 10)
         str = str.substr(0, 9).append(".");
     return str;
 }
 
-int Contact::contact(int i)
+int Contact::print_contact(int i)
 {
     if (this->First_Name.length() <= 0) // safe condition
         return (1);
-    std::cout << "|----------|----------|----------|----------|" << std::endl;
+    std::cout << "|==========|==========|==========|==========|" << std::endl;
     std::cout << "|";
     std::cout << std::setw(10) << i;
     std::cout << "|";
@@ -134,15 +135,6 @@ int Contact::contact(int i)
     return (0);
 }
 
-void Contact::print_contact_details(int index)
-{
-    std::cout << "\tindex:              " << index << std::endl;
-    std::cout << "\tFirst_Name:         " << this->First_Name << std::endl;
-    std::cout << "\tLast_Name:          " << this->Last_Name << std::endl;
-    std::cout << "\tNickname:           " << this->Nickname << std::endl;
-    std::cout << "\tPhone_Number:       " << this->Phone_Number << std::endl;
-    std::cout << "\tDarkest_Secret:     " << this->Darkest_Secret << std::endl;
-}
 
 void    Contact::Add()
 {
@@ -153,4 +145,14 @@ void    Contact::Add()
     this->Phone_Number = getPhone("\tPhone_Number\t"); 
     this->Darkest_Secret = getIn("\tDarkest_Secret\t"); 
     std::cout << "|---------------------------------------------------|\n";
+    // yes = 1;
+}
+void Contact::print_contact_details(int index)
+{
+    std::cout << "\tindex:              " << index << std::endl;
+    std::cout << "\tFirst_Name:         " << this->First_Name << std::endl;
+    std::cout << "\tLast_Name:          " << this->Last_Name << std::endl;
+    std::cout << "\tNickname:           " << this->Nickname << std::endl;
+    std::cout << "\tPhone_Number:       " << this->Phone_Number << std::endl;
+    std::cout << "\tDarkest_Secret:     " << this->Darkest_Secret << std::endl;
 }
